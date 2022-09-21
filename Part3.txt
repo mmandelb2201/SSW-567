@@ -1,0 +1,10 @@
+1. In terms of coding, the problem was fairly simple. I was about to make a mistake by checking for 
+scalene before right triangles. The problem with this would have been that all right triangles would
+have been classified as scalene instead of right. As for writing tests, it's been a while since I've done
+geometry so I had to look online for examples of right triangles.
+2. The specifications are almost airtight. The mention almost everything they need except for a check
+to see if a, b, and c can actually make a valid triangle.
+3. I have experience with python unittest before, so the tools didn't provide any issues for me.
+4. I knew I was done once I tested every possible outcome from the Classify_triangle function.
+I tested to make sure each output was occuring when it was supposed to and made sure it wasn't
+occuring when it wasn't supposed to.
