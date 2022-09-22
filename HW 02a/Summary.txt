@@ -1,0 +1,44 @@
+Description: Sometimes you will be given a program that someone else has written, and you will be asked to fix, update and enhance that program.   In this assignment you will start with an existing implementation of the classify triangle program that will be given to you.   You will also be given a starter test program that tests the classify triangle program, but those tests are not complete.  
+
+These are the two files:  Triangle.py and TestTriangle.py
+Triangle.py is a starter implementation of the triangle classification program.  
+TestTriangle.py  contains a starter set of unittest test cases to test the classifyTriangle() function in the file Triangle.py file.   
+In order to determine if the program is correctly implemented, you will need to update the set of test cases in the test program.  You will need to update the test program until you feel that your tests adequately test all of the conditions.   Then you should run the complete set of tests against the original triangle program to see how correct the triangle program is.    Capture and then report on those results in a formal test report described below.   For this first part you should not make any changes to the classify triangle program.  You should only change the test program.
+
+Based on the results of your initial tests, you will then update the classify triangle program to fix all defects.  Continue to run the test cases as you fix defects until all of the defects have been fixed.   Run one final execution of the test program and capture and then report on those results in a formal test report described below.   
+
+Note that you should NOT simply replace the logic with your logic from Assignment 1.  Test teams typically don't have the luxury of rewriting code from scratch and instead must fix what's delivered to the test team.   
+
+ Triangle.py contains an implementation of the classifyTriangle() function with a few bugs.  
+
+TestTriangle.py contains the initial set of test cases
+
+Author: Matthew Mandelbaum
+
+Summary:
+
+The test results can be found on the "test results.png" image in this folder.
+
+Reflection:
+
+The big thing I learned from this assignment is that my test cases need to be specific. I had one test case where I just wanted to see that, for example,
+3,4,5 did not return 'Equilateral'. The issue with this test case was that it was passing, but not passing for the reason I wanted it to. It was passing
+because the code was returning 'InvalidInput' for 3,4,5 when it should've been returning 'Right'. Even though the result isn't what I expected, the test case
+still passed since 'InvalidInput' != 'Equilateral'. 
+
+Honor Pledge: I pledge my honor that I abided by the Stevens Honor System.
+
+Results:
+
+This assignment did not require that many assumptions. The only assumption I made was that c > b and c > a for the code to work. 
+The data inputs I used were derived from the definitions of 'Right', 'Equilateral', 'Scalene', and 'Isoceles' triangles.
+The inputs for the tests cases tried to meet or miss those definitions accordingly. The results from this assignment make sense.
+The first run of the tests only passed 4 out of the 10 test cases. This is because the Triangly.py initially had a bug where nearly
+all the inputs would return InvalidInput. Therefore, the rest of the logic could not even be tested. 
+
+if a <= 0 or b <= b or c <= 0:
+    return 'InvalidInput'
+
+This code occured before any of the logic that classified a, b, and c as triangle types. The issue with this is that b will always be equal to b,
+so the logic in this if statement will always return true. Therefore, no code after this if statement will execute as 'InvalidInput' will
+always be returned beforehand. 
