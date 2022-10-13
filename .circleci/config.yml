@@ -9,7 +9,7 @@ jobs:
       - image: cimg/python:3.10.7
     steps:
       - checkout
-        - path: ~/HW04a
+        path: ~/HW04a
       - run:
           command: |
             pip install pytest
