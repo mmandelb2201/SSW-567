@@ -5,7 +5,7 @@ orbs:
 
 jobs:
   github-api:
-    working_directory: ~/HW 04a
+    working_directory: /HW 04a
     docker:
       - image: cimg/python:3.10.7
     steps:
