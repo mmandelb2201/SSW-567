@@ -12,7 +12,7 @@ jobs:
       - run:
           command: |
             pip install pytest
-            pytest --junitxml=test-results/junit.xml ./HW 04a/TestApi.py
+            pytest --junitxml=test-results/junit.xml ./HW04a/TestApi.py
       - store_test_results:
           path: test-results
 
