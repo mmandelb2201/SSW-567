@@ -1,8 +1,9 @@
 import re
+from typing import TypedDict
 import requests
 import json
 
-def getRepoCommits(userID):
+def getRepoCommits(userID) -> TypedDict:
     out = {}
     response = requests.get("https://api.github.com/users/" + userID + "/repos")
     if response.status_code == 200:
