@@ -1,0 +1,23 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@2.0.1
+
+jobs:
+  github-api:
+    docker:
+      - image: cimg/python:3.10.7
+    steps:
+      - checkout
+        - path: ~/HW04a
+      - run:
+          command: |
+            pip install pytest
+            pytest --junitxml=test-results/junit.xml TestApi.py
+      - store_test_results:
+          path: test-results
+
+workflows:
+  testing_api:
+    jobs:
+      - github-api
