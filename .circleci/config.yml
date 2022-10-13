@@ -5,10 +5,12 @@ orbs:
 
 jobs:
   github-api:
+    working_directory: ~/HW04a
     docker:
       - image: cimg/python:3.10.7
     steps:
-      - checkout
+      - checkout:
+          path: ~/repo
       - run:
           command: |
             pip install pytest
