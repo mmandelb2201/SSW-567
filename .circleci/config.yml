@@ -9,7 +9,7 @@ jobs:
       - image: cimg/python:3.10.7
     steps:
       - checkout:
-          path: /HW 04a
+          path: SSW567/HW 04a
       - run:
           command: |
             pip install pytest
