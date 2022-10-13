@@ -9,8 +9,6 @@ jobs:
     docker:
       - image: cimg/python:3.10.7
     steps:
-      - checkout:
-          path: ~/repo
       - run:
           command: |
             pip install pytest
